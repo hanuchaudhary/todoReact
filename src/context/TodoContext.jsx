@@ -1,12 +1,20 @@
-import React, { createContext, useState } from 'react';
+import React, { createContext, useState, useEffect } from 'react';
+
 export const TodoContext = createContext();
 
-
 export const TodoProvider = ({ children }) => {
-    const [todos, setTodos] = useState([
-        { id: 1, title: "Buy groceries", description: "Purchase milk, eggs, bread, and fruits.", isCompleted: false },
-        { id: 2, title: "Morning workout", description: "Complete a 30-minute run and 15 minutes of strength training.", isCompleted: true },
-    ]);
+    const [todos, setTodos] = useState([]);
+
+    useEffect(() => {
+        const storedTodos = JSON.parse(localStorage.getItem('todos'));
+        if (storedTodos) {
+            setTodos(storedTodos);
+        }
+    }, []);
+
+    useEffect(() => {
+        localStorage.setItem('todos', JSON.stringify(todos));
+    }, [todos]);
 
     const addTodo = (title, description) => {
         setTodos([

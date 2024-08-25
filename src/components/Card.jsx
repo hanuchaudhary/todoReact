@@ -8,11 +8,11 @@ const Card = ({ title, description, isCompleted, idkey, onClickRemove }) => {
   return (
     <div
       key={idkey}
-      className="bg-zinc-800 overflow-hidden mb-5 hover:scale-110 transition-transform shadow-black shadow-sm text-white w-56 relative rounded-3xl py-4 px-5"
+      className="bg-zinc-800 overflow-hidden mb-5 hover:scale-110 transition-transform shadow-black shadow-sm w-44 sm:w-44 md:w-56 text-white lg:w-56 relative rounded-3xl py-4 px-5"
     >
       <CloseBtn onClickRemove={onClickRemove}/>
-      <h1 className="text-xl font-semibold capitalize">{title}</h1>
-      <h1 className="pt-4 h-44 capitalize">{description}</h1>
+      <h1 className="md:text-xl text-sm font-semibold capitalize">{title}</h1>
+      <h1 className="pt-4 md:h-44 h-40 text-sm  ">{description}</h1>
       {isCompleted ? (
         <div
           onClick={() => toggleTodo(idkey)}

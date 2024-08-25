@@ -22,7 +22,7 @@ const Nav = () => {
   }
 
   return (
-    <div className=" relative text-white p-10">
+    <div className=" relative w-full text-white p-10">
       <Btn onClick={handleOnClick} />
       <div className="heading absolute top-0 left-1/2 p-5 text-zinc-600 text-balance">todo.app</div>
       {inputView && (
