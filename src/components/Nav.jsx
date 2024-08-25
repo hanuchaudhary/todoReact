@@ -12,19 +12,21 @@ const Nav = () => {
     setInputView((prevState) => !prevState);
   };
 
-  const {addTodo} = useContext(TodoContext)
+  const { addTodo } = useContext(TodoContext);
 
-  const handleTodo = () =>{
-      addTodo(title,description);
-      setTitle("");
-      setDescription("");
-      setInputView(false)
-  }
+  const handleTodo = () => {
+    addTodo(title, description);
+    setTitle("");
+    setDescription("");
+    setInputView(false);
+  };
 
   return (
-    <div className=" relative w-full text-white p-10">
+    <div className=" z-30 relative w-full text-white p-10">
       <Btn onClick={handleOnClick} />
-      <div className="heading absolute top-0 left-1/2 p-5 text-zinc-600 text-balance">todo.app</div>
+      <div className="heading absolute top-0 left-1/2 p-5 text-zinc-600 text-balance">
+        todo.app
+      </div>
       {inputView && (
         <div className="addtodo  mt-5 w-[80%]">
           <Input

@@ -7,23 +7,25 @@ const Foreground = () => {
   const { todos, removeTodo } = useContext(TodoContext);
 
   return (
-    <div className="flex justify-center">
-      <div className="z-20 relative">
+    <>
       <Nav />
-      <div className="grid lg:grid-cols-5 grid-cols-2 md:grid-cols-3 gap-2 md:gap-4">
-        {todos.map((e , idx) => (
-          <Card
-            onClickRemove={() => removeTodo(e.id)}
-            idkey={e.id}
-            key={e.id}
-            title={e.title}
-            description={e.description}
-            isCompleted={e.isCompleted}
-          />
-        ))}
+      <div className="flex justify-center">
+        <div className="z-20 relative">
+          <div className="grid lg:grid-cols-5 grid-cols-2 md:grid-cols-3 gap-2 md:gap-4">
+            {todos.map((e, idx) => (
+              <Card
+                onClickRemove={() => removeTodo(e.id)}
+                idkey={e.id}
+                key={e.id}
+                title={e.title}
+                description={e.description}
+                isCompleted={e.isCompleted}
+              />
+            ))}
+          </div>
+        </div>
       </div>
-    </div>
-    </div>
+    </>
   );
 };
 
