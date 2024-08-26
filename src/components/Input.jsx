@@ -1,12 +1,14 @@
 import React from "react";
 
 const Input = ({ label, placeholder, onChange, value }) => {
+
+
   return (
     <div>
       <div>
         <label
           htmlFor="first_name"
-          className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+          className="block mb-2 text-sm font-medium text-zinc-900 dark:text-white"
         >
           {label}
         </label>
@@ -15,7 +17,7 @@ const Input = ({ label, placeholder, onChange, value }) => {
         value={value}
           type="text"
           id="first_name"
-          className="bg-gray-50 border mb-4 border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+          className="bg-zinc-50 font-semibold border mb-4 border-zinc-300 text-zinc-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-zinc-700 dark:border-zinc-600 dark:placeholder-zinc-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
           placeholder={placeholder}
           required
         />

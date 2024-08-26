@@ -11,7 +11,7 @@ const Foreground = () => {
       <Nav />
       <div className="flex justify-center">
         <div className="z-20 relative">
-          <div className="grid lg:grid-cols-5 grid-cols-2 md:grid-cols-3 gap-2 md:gap-4">
+          <div className="grid lg:grid-cols-5 grid-cols-2 md:grid-cols-3 gap-5 md:gap-8">
             {todos.map((e, idx) => (
               <Card
                 onClickRemove={() => removeTodo(e.id)}
